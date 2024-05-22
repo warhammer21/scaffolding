@@ -5,11 +5,13 @@ from clustering import cluster_data  # Assuming your clustering code is in clust
 app = Flask(__name__)
 swagger = Swagger(app)
 
-@app.route('/')
+
+@app.route("/")
 def index():
     return "Welcome to the Clustering API!"
 
-@app.route('/cluster', methods=['POST'])
+
+@app.route("/cluster", methods=["POST"])
 def cluster():
     """
     Cluster data using KMeans
@@ -36,7 +38,7 @@ def cluster():
                 type: integer
               description: Cluster labels for each data point
     """
-    data = request.get_json().get('data')
+    data = request.get_json().get("data")
     if not data:
         return jsonify({"error": "No data provided"}), 400
 
@@ -47,5 +49,6 @@ def cluster():
 
     return jsonify(labels=labels.tolist())
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app.run(debug=True)
