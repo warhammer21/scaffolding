@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "scaffcluster"
+version = "0.1.0"
+description = ""
+authors = ["warhammer21 <shreyakvashisht21@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.8.5"
+Flask = "^3.0.3"
+scikit-learn = "1.0.2"
+flasgger = "^0.9.7.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

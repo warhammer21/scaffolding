@@ -1,0 +1,26 @@
+# templates/swagger.yml
+responses:
+  200:
+    description: Clustering results
+    examples:
+      application/json:
+        labels: [0, 1, 1, 0]
+        inertia: 10.5
+parameters:
+  - name: data
+    in: body
+    required: True
+    schema:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: array
+            items:
+              type: number
+  - name: n_clusters
+    in: query
+    type: integer
+    required: True
+    description: Number of clusters
