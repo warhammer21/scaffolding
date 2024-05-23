@@ -5,7 +5,6 @@ from clustering import cluster_data  # Assuming your clustering code is in clust
 app = Flask(__name__)
 swagger = Swagger(app)
 
-
 @app.route("/")
 def index():
     return "Welcome to the Clustering API!"
