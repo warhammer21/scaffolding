@@ -1,12 +1,11 @@
 install:
-    poetry install
+	poetry install
 
 format:
-    poetry run black *.py
+	poetry run black *.py
 
 lint:
-    poetry run pylint --disable=R,C app.py
+	poetry run pylint --disable=R,C app.py
 
 test:
-    poetry run python test_app.py
-
+	poetry run python test_app.py
